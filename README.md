@@ -14,7 +14,7 @@ This sample app demonstrates an Android architecture pattern - MVVM(Model, View,
 <li>100% Kotlin</li>
 <li>Architecture
     <ul>
-      <li>MVVM Pattern: </li>
+      <li>MVVM Pattern: Industry-recognized software architecure pattern supported by Google</li>
     </ul>
  </li>
 <li><a href="https://developer.android.com/kotlin/coroutines">Coroutines</a>: Concurrency design pattern provided by Kotlin</li>
@@ -27,7 +27,16 @@ This sample app demonstrates an Android architecture pattern - MVVM(Model, View,
 
 <!-- MVVM Description -->
 <h2>What is MVVM pattern?</h2>
-<p>MVVM stands for Model-View-ViewModel.</p>
+<p>MVVM stands for Model-View-ViewModel. By separating multiple app components into three layers - UI, Domain and Data, the app is scalable, maintainable and testable.</p>
+<ul>
+  <li>Architectural Principles</li>
+    <ul>
+      <li>Separations of concerns</li>
+      <li>Drive UI from data models</li>
+      <li>Single source of truth</li>
+      <li>Unidirectional Data Flow</li>
+   </ul>
+</ul>
 <p align="center">
    <img src="https://user-images.githubusercontent.com/57670625/229898324-82244a41-1e21-4962-8997-27c04d06c89c.jpg" width="85%"/>
 </p>
