@@ -38,12 +38,12 @@ This sample app demonstrates an Android architecture pattern - MVVM(Model, View,
    </ul>
 </ul>
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/57670625/229898324-82244a41-1e21-4962-8997-27c04d06c89c.jpg" width="85%"/>
+   <img src="https://user-images.githubusercontent.com/57670625/230802601-81201493-c2ad-4083-922e-bce14f1ad16c.jpg" width="85%"/>
 </p>
 <ul>
 <li><b>Model</b>: Model is a layer for storing data. It is responsible for all business logics and communication with the database and network layers.</li>
-<li><b>View</b>: View represents UI layer including activity and fragments. View displays user interfaces and notifies Presenter to keep track of user interactions.</li>
-<li><b>ViewModel</b>: </li>
+<li><b>View</b>: View represents UI layer including activity and fragments. When user actions occur, View notifies ViewModel so that ViewModel can request data to Model.</li>
+<li><b>ViewModel</b>: ViewModel acts as a communicator between View and Model. ViewModel requests data to Model responding to user actions and View observes ViewModel to update the UI.</li>
 </ul>
 <br>
 
@@ -51,7 +51,7 @@ This sample app demonstrates an Android architecture pattern - MVVM(Model, View,
 <h2>App Architecture</h2>
 <p>This sample app was built with MVVM pattern.</p>
 <p align="center">
-   <img src="" width="85%"/>
+   <img src="https://user-images.githubusercontent.com/57670625/230802758-2f786765-666d-462f-a8b9-00db96c493ae.jpg" width="85%"/>
 </p>
 <h3>How MVVM works in this app</h3>
 <p>The below diagram presents how the app responds according to an user interaction.</p>
