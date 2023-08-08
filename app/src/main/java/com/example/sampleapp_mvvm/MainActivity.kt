@@ -9,8 +9,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sampleapp_mvvm.data.NetworkResult
-import com.example.sampleapp_mvvm.data.model.Users
 import com.example.sampleapp_mvvm.databinding.ActivityMainBinding
+import com.example.sampleapp_mvvm.domain.User
 import com.example.sampleapp_mvvm.ui.MainViewModel
 import com.example.sampleapp_mvvm.ui.MainViewModelFactory
 import com.example.sampleapp_mvvm.ui.UserAdapter
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModelFactory: MainViewModelFactory
     private lateinit var viewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
-    private val userAdapter = UserAdapter(arrayListOf())
+    private val userAdapter = UserAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -85,10 +85,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun displayUserData(users: Users) {
+    private fun displayUserData(users: List<User>) {
         binding.recyclerView.visibility = View.VISIBLE
-        userAdapter.addData(users)
-        userAdapter.notifyDataSetChanged()
+        userAdapter.listDiffer.submitList(users)
     }
 
     private fun showErrorMessage(message: String) {
